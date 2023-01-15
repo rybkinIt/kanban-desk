@@ -9,13 +9,13 @@ import {Link} from "react-router-dom";
 const Backlog = () => {
 
     const [show, setShow]=useState(false)
-    const {input, inputItem, Input, addTodo, Foo}=useContext(Context)
+    const {input, inputItem, Input, addTodo, sliderMaxHeight}=useContext(Context)
 
 
     return(
         <div className='list-container'>
             <h1 className='list-title'>Backlog</h1>
-            <SimpleBar style={{ maxHeight: Foo() }}>
+            <SimpleBar style={{ maxHeight: sliderMaxHeight() }}>
                 {input.filter(item => item.status === 1 ).map(filteredItem => (
                     <div className='list-card' key={filteredItem.id}>
                         <p className='title'><Link className='link' to={`tasks/${filteredItem.id}`}>{filteredItem.item}</Link></p>

@@ -44,7 +44,7 @@ function App() {
            setInput(input.map((task)=>task.id === id?{...task, subtitle: e.target.value}:task))
         }
 
-    const Foo = (heightBar) =>{
+    const sliderMaxHeight = (heightBar) =>{
         const height=window.innerHeight
         if(window.innerWidth>1024){
             heightBar = height - 300
@@ -63,7 +63,7 @@ function App() {
                 Input,
                 onStatusChange,
                 onTitleChange,
-                Foo
+                sliderMaxHeight
             }}>
                 <div className='_wrapper'>
                     <Header/>

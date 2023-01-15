@@ -6,14 +6,14 @@ import {Link} from "react-router-dom";
 
 
 const List = (props) =>{
-    const {input, Foo}=useContext(Context)
+    const {input, sliderMaxHeight}=useContext(Context)
 
 
     return(
 
         <div className='list-container'>
             <h1 className='list-title'>{props.title}</h1>
-            <SimpleBar style={{ maxHeight: Foo() }}>
+            <SimpleBar style={{ maxHeight: sliderMaxHeight() }}>
                 <div>
                     {input.filter(item => item.status === props.currentStatus ).map(filteredItem => (
                         <div className='list-card' key={filteredItem.id}>

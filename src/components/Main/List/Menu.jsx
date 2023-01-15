@@ -9,8 +9,7 @@ const Menu = (props)=>{
     const [show, setShow]=useState(false)
     const {onStatusChange, input}=useContext(Context)
 
-    const Fii = (heightBarMenu) =>{
-        const height=window.innerHeight
+    const sliderHeight = (heightBarMenu) =>{
         if(window.innerWidth>1024){
             heightBarMenu = 170
         }else{
@@ -26,7 +25,7 @@ const Menu = (props)=>{
                     {show?<div className='menu'>
                         <div className='select'><Arrow/></div>
                         <div className='select-item-container'>
-                            <SimpleBar style={{ maxHeight: Fii() }}>
+                            <SimpleBar style={{ maxHeight: sliderHeight() }}>
                                 {input.filter(task=>(task.status=== props.menuStatus)).map((filteredItem) => (
                                     <div
                                         className='select-item title'
