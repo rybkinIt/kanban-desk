@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Требования к React
+ 1. Интерфейс должен быть поделен на компоненты. Перед началом работы хорошенько обдумайте, какие компоненты вы будете использовать. Деление на компоненты должно быть логичным и оправданным.
+ 2. После того как определитесь с делением на компоненты, подумайте о том, как верно организовать файловую структуру.
+ 3. Следуйте принципам модульности (используйте export, import).
+ 4. Возможно использование как классовых компонентов, так и функциональных.
+ 5. Используйте Synthetic events для работы с событиями.
+ 6. Для вывода разного состояния элементов в зависимости от действий пользователя (пример: раскрытое/свернутое меню пользователя) используйте условный рендеринг.
+ 7. Для реализации отдельных страниц для каждой задачи и перехода между страницами используйте библиотеку react-router.
+ 8. При написании кода старайтесь следовать принципам KISS (Keep It Short and Simple — не усложняй) и DRY (Don’t Repeat Yourself — не повторяйся).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Требования к верстке и CSS
+1. Вёрстка должна соответствовать макету. Добиваться «pixel-perfect» соответствия не обязательно, но основные моменты должны быть соблюдены: цветовая гамма, шрифты, размеры, отступы.
+2. Приложение должно корректно отображаться и на мобильных устройствах. Дизайн для мобильной версии вы можете найти в макете.
+3. Соблюдайте семантическую вёрстку. В приложении должны присутствовать разделы < header>, < main> и < footer>. Кнопки должна быть реализованы элементом < button>, элементы дропдауна — списком < select> и так далее.
+4. При наведении курсора на любые кликабельные элементы должен появляться cursor: pointer.
+5. Учитывайте состояния кнопки «+ Add card» — активная и неактивная.
+   →Если кнопка активна, её внешний вид должен соответствовать макету. При наведении она должна подсвечиваться (менять цвет), а курсор должен меняться на pointer.
 
-## Available Scripts
+   →Если кнопка неактивна (назначен атрибут disabled), её цвет должен отличаться от активного состояния, кнопка не должна реагировать на наведение курсора (цвет остаётся таким же, не появляется курсор pointer).
 
-In the project directory, you can run:
+6. Можете использовать любой вариант подключения стилей на ваше усмотрение: общий файл стилей проекта, CSS-модули или специальные React-библиотеки для стилизации компонентов (например, Styled Components).
+7. Использовать селекторы по тегу и id для задания стилей нельзя. Используйте классы. 
 
-### `npm start`
+# Прочие требования
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Пишите код аккуратно, с соблюдением форматирования и отступов.
+2. Старайтесь давать компонентам, переменным и функциям осмысленные имена.
+3. Старайтесь использовать современный ES6 синтаксис: стрелочные функции, декомпозиция, spread и т.д.
+4. При размещении проекта на GitHub не забывайте добавить папку node_modules в файл .gitignore, чтобы она не попала в ваш репозиторий. О том, как настроить .gitignore и почему папки node_modules не должно быть в репозитории, можете прочитать в этой статье.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# В детальной странице
 
-### `npm test`
+поле изменение изменяеться по клику на него 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
