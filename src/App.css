@@ -267,6 +267,11 @@
   height: 63vh;
   resize: none;
 }
+.item-textarea{
+  width: 60vw;
+  height: 3vh;
+  font-size: 24px;
+}
 .page-header{
   display: flex;
   justify-content: space-between;
