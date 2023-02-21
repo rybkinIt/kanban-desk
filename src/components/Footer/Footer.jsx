@@ -4,7 +4,9 @@ import {Context} from "../../context";
 const Footer = () =>{
 
     const {input} = useContext(Context)
-
+    
+    let date = new Date ()
+    
     return(
         <div className='footer'>
             <div className='tasks-container'>
@@ -12,7 +14,7 @@ const Footer = () =>{
                 <p className='footer-title title2'>Finished tasks {input.filter(item => item.status === 4).length}</p>
             </div>
                 <div className='info-container'>
-                    <p className='footer-title title3'>Kanban board by &lt;NAME&gt;, &lt;{Date}&gt;</p>
+                    <p className='footer-title title3'>Kanban board by &lt;NAME&gt;, &lt;{date}&gt;</p>
                 </div>
         </div>
     )
